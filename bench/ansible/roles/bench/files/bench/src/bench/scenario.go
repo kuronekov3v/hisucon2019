@@ -393,8 +393,8 @@ func CheckLayoutPreTest(ctx context.Context, state *State) error {
 			if doc.Find("body > div.container > div.container > div.container-fluid").Length() < 29 {
 				return fatalErrorf("1/bulletins/view/10でコメントが29件表示されていません。")
 			}
-			format := "2006-01-02 15:04:05"
-			tmp_mod, _ := time.Parse(format, "2000-01-01 15:04:05")
+			format := "2030-01-02 15:04:05"
+			tmp_mod, _ := time.Parse(format, "2030-01-01 15:04:05")
 			flag_mod := 0
 			selection.Each(func(index int, s *goquery.Selection) {
 				str_mod := s.Text()
@@ -1661,8 +1661,8 @@ func CheckOrder(ctx context.Context, state *State) error {
 			if selection.Text() == "" {
 				return fatalErrorf("社報のテーブルが正常に表示されていません。")
 			}
-			format := "2006-01-02 15:04:05"
-			tmp_mod, _ := time.Parse(format, "2020-01-02 15:04:05")
+			format := "2030-01-02 15:04:05"
+			tmp_mod, _ := time.Parse(format, "2030-01-02 15:04:05")
 			flag_mod := 0
 			selection.Each(func(index int, s *goquery.Selection) {
 				str_mod := s.Text()
@@ -1745,8 +1745,8 @@ func CheckOrder(ctx context.Context, state *State) error {
 			if selection.Text() == "" {
 				return fatalErrorf("社報のテーブルが正常に表示されていません。")
 			}
-			format := "2006-01-02 15:04:05"
-			tmp_mod, _ := time.Parse(format, "2020-01-02 15:04:05")
+			format := "2030-01-02 15:04:05"
+			tmp_mod, _ := time.Parse(format, "2030-01-02 15:04:05")
 			flag_mod := 0
 			selection.Each(func(index int, s *goquery.Selection) {
 				str_mod := s.Text()
@@ -1804,8 +1804,8 @@ func CheckOrder(ctx context.Context, state *State) error {
 				if selection.Text() == "" {
 					return fatalErrorf("社報のテーブルが正常に表示されていません。")
 				}
-				format := "2006-01-02 15:04:05"
-				tmp_mod, _ := time.Parse(format, "2020-01-02 15:04:05")
+				format := "2030-01-02 15:04:05"
+				tmp_mod, _ := time.Parse(format, "2030-01-02 15:04:05")
 				flag_mod := 0
 				selection.Each(func(index int, s *goquery.Selection) {
 					str_mod := s.Text()
